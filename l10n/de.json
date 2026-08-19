@@ -1,0 +1,29 @@
+{
+	"translations": {
+		"Archiv": "Archiv",
+		"Suche": "Suche",
+		"Integrität": "Integrität",
+		"Audit-Log": "Audit-Log",
+		"Dashboard": "Dashboard",
+		"Absender": "Absender",
+		"Empfänger": "Empfänger",
+		"Betreff": "Betreff",
+		"Datum": "Datum",
+		"Größe": "Größe",
+		"Von": "Von",
+		"An": "An",
+		"Export": "Export",
+		"Herunterladen": "Herunterladen",
+		"Integrität prüfen": "Integrität prüfen",
+		"Keine Ergebnisse": "Keine Ergebnisse",
+		"Suchergebnisse": "Suchergebnisse",
+		"Zeitraum": "Zeitraum",
+		"Aufbewahrungsfrist": "Aufbewahrungsfrist",
+		"Archivierung aktivieren": "Archivierung aktivieren",
+		"Automatische Löschung nach Ablauf": "Automatische Löschung nach Ablauf",
+		"E-Mail-Archiv": "E-Mail-Archiv",
+		"Rechtliche Aufbewahrung (Legal Hold)": "Rechtliche Aufbewahrung (Legal Hold)",
+		"Verfahrensdokumentation": "Verfahrensdokumentation"
+	},
+	"pluralForm": "nplurals=2; plural=(n != 1);"
+}

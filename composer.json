@@ -1,0 +1,19 @@
+{
+	"name": "souvera/archive",
+	"description": "Souvera Archive — revisionssichere E-Mail-Archivierung",
+	"type": "project",
+	"license": "AGPL-3.0-or-later",
+	"authors": [
+		{
+			"name": "Souvera"
+		}
+	],
+	"require": {
+		"php": ">=8.2"
+	},
+	"autoload": {
+		"psr-4": {
+			"OCA\\SouveraArchive\\": "lib/"
+		}
+	}
+}

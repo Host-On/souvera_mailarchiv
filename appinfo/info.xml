@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<info xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="https://apps.nextcloud.com/schema/apps/info.xsd">
+	<id>souvera_mailarchiv</id>
+	<name>Souvera Archive</name>
+	<summary>Revisionssichere E-Mail-Archivierung</summary>
+	<description><![CDATA[
+		Souvera Archive — revisionssichere, S3-native E-Mail-Archivierung
+		mit kryptografischer Integritaetskette, GoBD-konformem Export
+		und vollstaendigem Audit-Trail.
+
+		Features:
+		- SMTP-Journaling aller Mails (Sieve redirect :copy)
+		- S3-Speicherung mit SHA-256-Integritaetsnachweis
+		- Merkle-Chain mit Ed25519-Signaturen (taegliches Sealing)
+		- Volltextsuche ueber Absender, Empfaenger, Betreff, Zeitraum
+		- Audit-Trail (wer hat wann gesucht/exportiert)
+		- GoBD-konformer Export (EML + Index-XML + Chain-Proofs)
+		- Retention-Policies (6/10 Jahre) mit Legal-Hold
+		- Integritaets-Dashboard + Verfahrensdokumentation
+	]]></description>
+	<version>0.4.4</version>
+	<licence>agpl</licence>
+	<author>Souvera</author>
+	<namespace>SouveraArchive</namespace>
+	<category>organization</category>
+
+	<dependencies>
+		<nextcloud min-version="30" max-version="34"/>
+	</dependencies>
+
+	<commands>
+		<command>OCA\SouveraArchive\Command\ArchiveReconcile</command>
+		<command>OCA\SouveraArchive\Command\ArchiveExport</command>
+		<command>OCA\SouveraArchive\Command\ArchivePolicySet</command>
+		<command>OCA\SouveraArchive\Command\ArchiveProcedureDoc</command>
+		<command>OCA\SouveraArchive\Command\SelfUpdate</command>
+		<command>OCA\SouveraArchive\Command\DevopsChannel</command>
+	</commands>
+
+	<settings>
+		<admin>OCA\SouveraArchive\Settings\AdminSection</admin>
+	</settings>
+</info>

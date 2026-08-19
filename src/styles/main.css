@@ -1,0 +1,164 @@
+/**
+ * Souvera Archive — Design System
+ *
+ * Nutzt Nextcloud-CSS-Variablen für Dark-Mode-Kompatibilität.
+ * Konsistent mit souvera_shield / souvera_central (gleiche Tokens, gleiches Raster).
+ */
+
+:root {
+	--sc-control-height:        44px;
+	--sc-control-padding-x:     16px;
+	--sc-control-padding-y:     10px;
+	--sc-control-radius:        var(--border-radius-large, 12px);
+	--sc-control-border-width:  1.5px;
+	--sc-field-gap:             24px;
+	--sc-section-gap:           40px;
+	--sc-focus-ring: 0 0 0 3px rgba(var(--color-primary-element-rgb, 0, 130, 201), 0.25);
+}
+
+/* ---- Base ---- */
+#souvera-archive-content {
+	height: 100%;
+}
+
+/* Content wrapper — consistent outer padding across all views (matches shield/central) */
+.souvera-content {
+	width: 100%;
+	min-height: 100%;
+	box-sizing: border-box;
+	padding: 30px;
+	color: var(--color-main-text);
+}
+
+#souvera-archive-content h2 {
+	font-size: 20px;
+	font-weight: 600;
+	margin: 0 0 16px 0;
+	color: var(--color-main-text);
+}
+
+#souvera-archive-content h3 {
+	font-size: 16px;
+	font-weight: 600;
+	color: var(--color-main-text);
+}
+
+/* ---- Navigation ---- */
+#souvera-archive-content .app-navigation-entry-link,
+#souvera-archive-content .app-navigation-entry__title,
+#souvera-archive-content .app-navigation a {
+	text-decoration: none;
+}
+
+/* ---- Shared heading classes (matches shield) ---- */
+.souvera-heading-1 { font-size: 1.7rem; font-weight: 700; margin: 0 0 8px; color: var(--color-main-text); }
+.souvera-heading-2 { font-size: 1.3rem; font-weight: 600; margin: 0 0 4px; color: var(--color-main-text); }
+.souvera-section__sub { color: var(--color-text-maxcontrast); margin: 0 0 var(--sc-field-gap); font-size: .95rem; }
+.souvera-section { margin-bottom: var(--sc-section-gap); }
+.souvera-section__header { display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; margin-bottom: 12px; flex-wrap: wrap; }
+.souvera-section__actions { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+
+/* ---- Cards & Stats (matches shield .souvera-stat) ---- */
+.souvera-card {
+	border: 1px solid var(--color-border);
+	border-radius: var(--border-radius-large, 12px);
+	background: var(--color-main-background);
+	padding: 20px 24px;
+}
+.souvera-card + .souvera-card { margin-top: 16px; }
+.souvera-stats {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+	gap: 16px;
+}
+.souvera-stat {
+	background: var(--color-main-background);
+	border: 1px solid var(--color-border);
+	border-radius: var(--border-radius-large, 12px);
+	padding: 16px 18px;
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+}
+.souvera-stat__label { font-size: .8rem; text-transform: uppercase; letter-spacing: .04em; color: var(--color-text-maxcontrast); }
+.souvera-stat__value { font-size: 1.6rem; font-weight: 600; font-variant-numeric: tabular-nums; }
+
+/* ---- Badges ---- */
+.souvera-badge {
+	display: inline-flex; align-items: center; gap: 6px;
+	padding: 3px 10px; border-radius: 20px;
+	font-size: 12px; font-weight: 500; white-space: nowrap;
+	background: var(--color-background-dark); color: var(--color-text-maxcontrast);
+}
+.souvera-badge--ok { background: color-mix(in srgb, var(--color-success) 15%, transparent); color: var(--color-success); }
+.souvera-badge--warn { background: color-mix(in srgb, var(--color-warning) 15%, transparent); color: var(--color-warning); }
+.souvera-badge--err { background: color-mix(in srgb, var(--color-error) 15%, transparent); color: var(--color-error); }
+
+/* ---- Tables ---- */
+.table-scroll {
+	overflow-x: auto;
+	-webkit-overflow-scrolling: touch;
+}
+
+#souvera-archive-content table {
+	width: 100%;
+	border-collapse: collapse;
+	min-width: 540px;
+}
+
+#souvera-archive-content th {
+	text-align: left;
+	padding: 10px 12px;
+	border-bottom: 2px solid var(--color-border);
+	font-size: 12px;
+	font-weight: 600;
+	color: var(--color-text-maxcontrast);
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+}
+
+#souvera-archive-content td {
+	padding: 10px 12px;
+	border-bottom: 1px solid var(--color-border);
+	font-size: 13px;
+}
+
+#souvera-archive-content tr:hover td {
+	background: var(--color-background-hover);
+}
+
+/* ---- Legacy stat-card (kept for backward compat) ---- */
+#souvera-archive-content .stat-card {
+	background: var(--color-main-background);
+	border: 1px solid var(--color-border, var(--color-background-dark));
+	border-radius: var(--border-radius-large, 12px);
+	padding: 16px 18px;
+}
+
+/* ---- Utility ---- */
+.mono { font-family: 'SF Mono', 'Menlo', 'Monaco', monospace; }
+.nowrap { white-space: nowrap; }
+.text-ok { color: var(--color-success); }
+.text-warn { color: var(--color-warning); }
+.text-err { color: var(--color-error); }
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+	.souvera-content {
+		padding: 16px 20px 32px;
+	}
+}
+
+@media (max-width: 640px) {
+	#souvera-archive-content table { font-size: .82rem; }
+	#souvera-archive-content th,
+	#souvera-archive-content td { padding: 8px 10px; }
+}
+
+@media (max-width: 600px) {
+	#souvera-archive-content th,
+	#souvera-archive-content td {
+		padding: 6px 4px;
+		font-size: 11px;
+	}
+}
