@@ -69,7 +69,7 @@ class ArchiveProcedureDoc extends Base
 				],
 				[
 					'heading' => '6. Export-Verfahren',
-					'content' => 'GoBD-konformer Export als ZIP-Archiv mit:\n- EML-Dateien (RFC 5322)\n- Index-XML\n- Chain-Proof-Dateien (Merkle-Path + Ed25519-Signaturen)\nExport via occ archive:export oder Web-UI.',
+					'content' => 'GoBD-konformer Export als ZIP-Archiv mit:\n- EML-Dateien (RFC 5322)\n- Index-XML\n- Chain-Proof-Dateien (Merkle-Path + Ed25519-Signaturen)\nExport via occ souvera_mailarchiv:archive:export oder Web-UI.',
 				],
 				[
 					'heading' => '7. Integritätsstatus',

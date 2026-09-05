@@ -23,7 +23,7 @@ npm run build
 
 ## Commands
 
-- `occ archive:reconcile` — S3-Index-Abgleich
-- `occ archive:export` — GoBD-konformer Export
+- `occ souvera_mailarchiv:archive:reconcile` — S3-Index-Abgleich
+- `occ souvera_mailarchiv:archive:export` — GoBD-konformer Export
 - `occ archive:policy:set` — Retention-Policy setzen
 - `occ archive:procedure-doc` — Verfahrensdokumentation generieren
