@@ -21,7 +21,9 @@ class ArchiveProcedureDoc extends Base
 	protected function configure(): void
 	{
 		$this
-			->setName('archive:procedure-doc')
+			->setName('souvera_mailarchiv:archive:procedure-doc')
+			// Legacy-Alias (Namespace vor der Vereinheitlichung)
+			->setAliases(['archive:procedure-doc'])
 			->setDescription('Generiert die Verfahrensdokumentation für das E-Mail-Archiv.')
 			->addOption('tenant', null, InputOption::VALUE_REQUIRED, 'Tenant-ID')
 			->addOption('output', null, InputOption::VALUE_REQUIRED, 'Pfad für die Ausgabedatei (Markdown)')

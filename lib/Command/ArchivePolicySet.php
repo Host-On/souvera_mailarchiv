@@ -21,7 +21,9 @@ class ArchivePolicySet extends Base
 	protected function configure(): void
 	{
 		$this
-			->setName('archive:policy:set')
+			->setName('souvera_mailarchiv:archive:policy:set')
+			// Legacy-Alias (Namespace vor der Vereinheitlichung)
+			->setAliases(['archive:policy:set'])
 			->setDescription('Setzt die Aufbewahrungs-Policy für einen Tenant.')
 			->addOption('tenant', null, InputOption::VALUE_REQUIRED, 'Tenant-ID')
 			->addOption('retention', null, InputOption::VALUE_REQUIRED, 'Aufbewahrungsfrist in Jahren (6-15)')

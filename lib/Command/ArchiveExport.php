@@ -21,7 +21,9 @@ class ArchiveExport extends Base
 	protected function configure(): void
 	{
 		$this
-			->setName('archive:export')
+			->setName('souvera_mailarchiv:archive:export')
+			// Legacy-Alias (Namespace vor der Vereinheitlichung)
+			->setAliases(['archive:export'])
 			->setDescription('Startet einen GoBD-konformen Archiv-Export.')
 			->addOption('tenant', null, InputOption::VALUE_REQUIRED, 'Tenant-ID')
 			->addOption('from', null, InputOption::VALUE_REQUIRED, 'Startdatum (YYYY-MM-DD)')

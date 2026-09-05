@@ -21,7 +21,9 @@ class ArchiveReconcile extends Base
 	protected function configure(): void
 	{
 		$this
-			->setName('archive:reconcile')
+			->setName('souvera_mailarchiv:archive:reconcile')
+			// Legacy-Alias (Namespace vor der Vereinheitlichung)
+			->setAliases(['archive:reconcile'])
 			->setDescription('Prüft den S3-Index gegen die gespeicherten E-Mails und meldet Inkonsistenzen.')
 			->addOption('tenant', null, InputOption::VALUE_REQUIRED, 'Tenant-ID (default: Systemkonfiguration)')
 			->addOption('json', null, InputOption::VALUE_NONE, 'Ausgabe als JSON');
