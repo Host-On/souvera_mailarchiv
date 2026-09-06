@@ -19,7 +19,7 @@
 		- Retention-Policies (6/10 Jahre) mit Legal-Hold
 		- Integritaets-Dashboard + Verfahrensdokumentation
 	]]></description>
-	<version>0.4.5</version>
+	<version>0.4.6</version>
 	<licence>agpl</licence>
 	<author>Souvera</author>
 	<namespace>SouveraArchive</namespace>

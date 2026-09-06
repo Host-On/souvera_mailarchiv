@@ -24,7 +24,12 @@ trait SelfUpdateTrait
     {
         $appId = $this->getAppId();
         $config = \OCP\Server::get(\OCP\IConfig::class);
-        $channel = trim((string) $config->getAppValue($appId, 'devops.channel', 'stable'));
+        // EIN zentraler Suite-Channel (dev|stable) für alle Souvera-Apps;
+        // Abwärtskompatibilität: alter App-Channel, falls System-Config leer.
+        $suite = trim((string) $config->getSystemValue('souvera.update.channel', ''));
+        $channel = in_array($suite, ['dev', 'stable'], true)
+            ? $suite
+            : trim((string) $config->getAppValue($appId, 'devops.channel', 'stable'));
 
         if ($channel === 'stable' && !$force) {
             // Release channel: check/install at most once per 24h and only
