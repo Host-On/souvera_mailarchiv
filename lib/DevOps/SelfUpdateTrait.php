@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace OCA\SouveraMailarchiv\DevOps;
+namespace OCA\SouveraArchive\DevOps;
 
 /**
  * Self-update via GitHub Releases API (ZIP download).
